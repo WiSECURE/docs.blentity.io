@@ -191,10 +191,10 @@ a {
                     </div>
                 </div>
 
-                <div class="sc-1y3mfc-0 bVDOmk pb">
-                    <div class="sc-yzlt5i-0 sc-1lzclg2-0 iAAzET ksXcPP">
+                <div class="bVDOmk pb">
+                    <div class="iAAzET ksXcPP">
                         <!-- English -->
-                        <div id="english-content" class="language-content active">
+                        <!-- <div id="english-content" class="language-content active">
 
                             <a class="sc-tyaw0p-3 kKzjdi" href="./English.html" style="padding-left: 12px;" target="content">
                                 <span class="sc-tyaw0p-0 eULMdd">
@@ -246,10 +246,10 @@ a {
                                     <div class="sc-tyaw0p-4 kFIuxx">Appendix D：Troubleshooting and Technical Support</div>
                                 </span>
                             </a>
-                        </div>
+                        </div> -->
 
                         <!-- Jpn -->
-                        <div id="japanese-content" class="language-content">
+                        <div id="japanese-content" class="language-content active">
 
                             <a class="sc-tyaw0p-3 kKzjdi" href="./Japanese.html" style="padding-left: 12px;" target="content">
                                 <span class="sc-tyaw0p-0 eULMdd">
@@ -278,7 +278,7 @@ a {
                             </a>
                             <a class="sc-tyaw0p-3 kKzjdi" href="./Japanese.html#Blentity Manger" style="padding-left: 12px;" target="content">
                                 <span class="sc-tyaw0p-0 eULMdd">
-                                    <div class="sc-tyaw0p-4 kFIuxx">6. Blentity Manger について</div>
+                                    <div class="sc-tyaw0p-4 kFIuxx">6. Blentity Manager について</div>
                                 </span>
                             </a>
                             <a class="sc-tyaw0p-3 kKzjdi" href="./Japanese.html#OpenPGP Gadget" style="padding-left: 12px;" target="content">
@@ -370,7 +370,7 @@ a {
                             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
                         </svg>
                         <select id="language-select" onchange="changeLanguage()">
-                            <option value="English">English</option>
+                            <!-- <option value="English">English</option> -->
                             <option value="Japanese">日本語</option>
                             <!-- <option value="Chinese">中文</option> -->
                         </select>
@@ -379,7 +379,7 @@ a {
         </aside>
         <main style="margin-left: 260px; display: flex; flex: 1; flex-direction: row;">
             <div style="display: flex; flex: 1; flex-direction: column;">
-                <iframe style="border: 0; flex: 1;" name="content" src="./English.html"></iframe>
+                <iframe style="border: 0; flex: 1;" name="content" src="./Japanese.html"></iframe>
             </div>
         </main>
     </div>
@@ -389,13 +389,12 @@ a {
             let iframe = document.querySelector('iframe[name="content"]')
             let selectedLanguage = select.value;
             iframe.src =  `./${selectedLanguage}.html`
-            console.log(iframe.src )
+            // console.log(iframe.src )
 
             document.querySelectorAll('.language-content').forEach(content => {
                 content.classList.remove('active');
             });
             document.getElementById(`${selectedLanguage.toLowerCase()}-content`).classList.add('active');
-
         }
     </script>
 </body>
